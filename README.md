@@ -4,6 +4,6 @@ Nous avons créer un site composé de 5 pages statiques en guise de page personn
 ## Technos
 Utilisation du HTML et CSS uniquement.
 ## Contributeurs
-• Rania
-• Gaelle
-• Haroun
+• Rania  
+• Gaelle  
+• Haroun  
