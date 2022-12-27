@@ -1,5 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+    --primary : #A7D6E0 ;
+    --secondary : #B3ACFF;
+    --tertiary : #E6E6E6;
+}
+
+*{
+    font-family: "Monserrat", sans-serif ;
+}
+
+body {
+    background-color: var(--primary);
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    padding: 2rem;
+    width: 400px;
+    color: black;
+}
+
+header img {
+    width: 13rem;
+    height: 16rem;
+    border: var(--tertiary) 10px solid;
+    padding: 0%;
+    margin: 5%;
+    cursor: pointer;
+    align-content: center;
+}
+
+header h1 {
+    text-align: center;
+    flex-wrap: wrap;
+    color: yellow;
+    width: 70%;
+    margin: auto;
+    font-size: 80px;
+}
+
+header h2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header p {
+    color: blue;
+    text-align: center;
+}
+
+main {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    color: black;
+    background: var(--tertiary);
+    margin: 30px;
+    padding: 1.5%;
+
+}
+
+main section h3 {
+    font-size: 25px;
+    color: white;
+    padding: 3px;
+    background-color: var(--primary);
+    margin: 0;
+}
+
+main section .black {
+    color: black;
+}
+
+main section p{
+    height: 50px;
+    font-size: 23px;
+    text-align: left;
+}
+
+.menu{
+    color: yellow;
+}
+
+.menu a {
+    border-bottom: 2px solid blue;
+    color: blue;
+    font-size: 22px;  
+    transition: 300ms;
+}
+
+.menu a:hover{
+    border-bottom: 2px solid yellow;
+    color: yellow;
+    background: #9a91f862;
+}
+
+.menu .title {
+    text-align: center;
+}
+
+footer .footer-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    max-width: 1000px;
+}
+
+footer p{
+    font-size: 20px ;
+}
+
+footer a{
+    font-size: 20px ;
+    width: max-content;
+    color: blue;
+    text-decoration: underline;
+}
 
 
+/*************************/
 form{
     width: 580px;
     border: 2px solid rgb(6, 1, 1);
@@ -13,14 +156,14 @@ form input{
 
 form input[type="radio"]{
     width: auto;
-cursor: pointer;
+    cursor: pointer;
 }
 
 form input[type="submit"],
 form input[type="reset"]
 {
     width: 50%;
-    background: #A7D6E0;
+    background: var(--primary);
     color: white;
     font-size: 14px;
     font-weight: 600;
@@ -55,6 +198,4 @@ form input[type="reset"]:hover
     align-items: center;
     width: 300px;
 }
-
-
 
