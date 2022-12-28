@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,60 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="favicon.png" type="image/png">
-    <title>Document</title>
+    <title>Inscription</title>
 </head>
-<body>
-    <form>
-        <div class="form-controller">
-            <label for="nom">Nom :</label>
-            <input name="nom" type="text" placeholder="Saisir votre nom">
-        </div>
-        <div class="form-controller">
-            <label for="prenom">Prenom :</label>
-            <input name="prenom" type="text" placeholder="Saisir votre prenom">
-        </div>
-        <div class="form-controller sexe">
-            <label for="sexe">Sexe :</label>
-            <div>
-                <div>
-                    <label>F :</label>
-                    <input type="radio" name="sexe" value="F">
-                </div>
-                <div>
-                    <label>H :</label>
-                    <input type="radio" name="sexe" value="H">
+    <body>
+        <header>
+            <div class="left">
+                <img src="../img.jpg" alt="image code">
+            </div>
+    
+            <div class="right">
+                <h1>Bienvenue sur ma page personnelle.</h1>
+                <h2>Je suis en CDA Full stack et j'apprends le HTML et le CSS</h2>
+            </div>
+        </header>
+    
+        <main class="main">
+       
+                <div class="left-menu">
+                <div class="menu">
+                    <div class="title">
+                        <h1>Menu</h1>
+                    </div>
+                    <div class="links">
+                        <a href="/html/accueil.html">Accueil</a>
+                        <a href="/html/mon_cv.html">Mon cv</a>
+                        <a href="/html/mes_projets.html">Mes projets</a>
+                        <a class="is_inside" href="/html/inscription.html">Inscrivez-vous</a>
+                        <a href="/html/contact.html">Contactez-moi</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-controller">
-            <label for="naissance">Date de naissance :</label>
-            <input name="naissance" type="date">
-        </div>
-        <div class="form-controller">
-            <label for="date">Date :</label>
-            <input name="date" type="date">
-        </div>
-        <div class="form-controller">
-            <label for="heure">Heure :</label>
-            <input name="heure" type="time" >
-        </div>
-        <div class="form-controller">
-            <label for="num">Num Telephone :</label>
-            <input name="num" type="tel" placeholder="Saisir Num telephone">
-        </div>
-        <div class="form-controller">
-            <label for="email">Email :</label>
-            <input name="email" type="email" placeholder="Saisir @ email">
-        </div>
-        <div class="form-controller">
-            <label for="color">Couleur favorite :</label>
-            <input name="color" type="color">
-        </div>
-        <div class="form-controller btn">
-            <input type="submit" value="Envoyer">
-            <input type="reset" value="Reinitialiser">
-        </div>
-    </form>
+    
+    
+    
+            <div class="form">
+                <h3>Inscription</h3>
+                <form>
+                    
+                    <div class="form-control">
+                        <label for="nom">Nom :</label>
+                        <input name="nom" type="text" placeholder="Saisir votre nom">
+                    </div>
+                    <div class="form-control">
+                        <label for="prenom">Prenom :</label>
+                        <input name="prenom" type="text" placeholder="Saisir votre prenom">
+                    </div>
+                    <div class="form-control sexe">
+                        <label for="sexe">Sexe :</label>
+                        <div>
+                            <div>
+                                <label>F :</label>
+                                <input type="radio" name="sexe" value="F" checked>
+                            </div>
+                            <div>
+                                <label>H :</label>
+                                <input type="radio" name="sexe" value="H">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="naissance">Date de naissance :</label>
+                        <input name="naissance" type="date">
+                    </div>
+                    <div class="form-control">
+                        <label for="date">Date :</label>
+                        <input name="date" type="date">
+                    </div>
+                    <div class="form-control">
+                        <label for="heure">Heure :</label>
+                        <input name="heure" type="time" >
+                    </div>
+                    <div class="form-control">
+                        <label for="num">Num Telephone :</label>
+                        <input name="num" type="tel" placeholder="Saisir Num telephone">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email :</label>
+                        <input name="email" type="email" placeholder="Saisir @ email">
+                    </div>
+                    <div class="form-control">
+                        <label for="color">Couleur favorite :</label>
+                        <input name="color" type="color">
+                    </div>
+                    <div class="form-control two_btn">
+                        <input type="submit" value="Envoyer">
+                        <input type="reset" value="Reinitialiser">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+            <p>Copyright©2022</p>
+            <a href="mailto:laboDexter@gmail.fr">laboDexter@gmail.fr</a>
+            </div>
+        </footer>
 
 </body>
 </html>
+
+

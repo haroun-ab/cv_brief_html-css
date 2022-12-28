@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: var(--primary);
+    background: var(--primary);
     margin: 0;
 }
 
@@ -80,7 +80,6 @@ main section {
     background: var(--tertiary);
     margin: 30px;
     padding: 1.5%;
-
 }
 
 main section h3 {
@@ -108,18 +107,26 @@ main section p{
 .menu a {
     border-bottom: 2px solid blue;
     color: blue;
-    font-size: 22px;  
+    font-size: 22px;
+    width: 23rem;
+    padding: 25px;  
     transition: 300ms;
 }
 
 .menu a:hover{
-    border-bottom: 2px solid yellow;
+    
     color: yellow;
     background: #9a91f862;
 }
 
 .menu .title {
     text-align: center;
+}
+
+.menu .is_inside{
+    border-bottom: 2px solid yellow;
+    color: yellow;
+    background: #9a91f862;
 }
 
 footer .footer-content{
@@ -131,7 +138,9 @@ footer .footer-content{
 }
 
 footer p{
+    color: white;
     font-size: 20px ;
+    font-weight: 600;
 }
 
 footer a{
@@ -141,22 +150,54 @@ footer a{
     text-decoration: underline;
 }
 
+/**Pages Formulaires (Inscription & Contact**/
+div.form {
+    width: 80%;
+    margin: 50px;
+    padding: 1%;
+    background: var(--tertiary);
+}
 
-/*************************/
 form{
-    width: 580px;
-    border: 2px solid rgb(6, 1, 1);
+    width: 60%;
+    margin: auto;
+}
+
+.form h3 {
+    font-size: 25px;
+    color: white;
+    padding: 3px;
+    background-color: var(--primary);
+    text-align: center;
+    margin: 0 0 50px 0;
 }
 
 form input{
-    height: 30px;
-    width: 300px;
+    height: 45px;
+    width: 70%;
     border: #b0b0b0 1px solid;
+    font-size: 20px;
+}
+
+form label{
+    text-align: end;
+    font-size: 20px;
+    margin: 7px 10%;
 }
 
 form input[type="radio"]{
     width: auto;
     cursor: pointer;
+}
+
+form textarea{
+    font-size: 20px;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    width:  70%;
+    min-width: 70%;
+    max-width: 70%;
 }
 
 form input[type="submit"],
@@ -165,12 +206,12 @@ form input[type="reset"]
     width: 50%;
     background: var(--primary);
     color: white;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
-    margin: 0 2%;
+    margin: 0 5%;
     border: none;
     cursor: pointer;
-    transition: 300ms ;
+    transition: 300ms;
 }
 
 
@@ -181,19 +222,27 @@ form input[type="reset"]:hover
     transform: scale(1.03);
 }
 
-.form-controller{
+.form-control{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10px 0;
-    height: 30px 
+    grid-template-columns: 1fr 2fr;
+    margin: 12px 0;
+    height: 40px;
 }
 
-.form-controller.btn{
+.form-control.btn{
     display: flex;    
-    margin: 30px 0 ;
+    justify-content: center;
+    width: 100%;
+    margin: 100px auto 20px auto;
 }
 
-.form-controller div{
+.form-control.two_btn{
+    display: flex;    
+    width: 60%;
+    margin: 50px auto 20px auto;
+}
+
+.form-control div{
     display: flex;
     align-items: center;
     width: 300px;

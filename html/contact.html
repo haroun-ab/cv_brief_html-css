@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="favicon.png" type="image/png">
-    <title>Document</title>
+    <title>Contact</title>
 </head>
-<body>
+    <body>
+        <header>
+            <div class="left">
+                <img src="../img.jpg" alt="image code">
+            </div>
     
+            <div class="right">
+                <h1>Bienvenue sur ma page personnelle.</h1>
+                <h2>Je suis en CDA Full stack et j'apprends le HTML et le CSS</h2>
+            </div>
+        </header>
+    
+        <main class="main">
+            <div class="left-menu">
+                <div class="menu">
+                    <div class="title">
+                        <h1>Menu</h1>
+                    </div>
+                    <div class="links">
+                        <a href="/html/accueil.html">Accueil</a>
+                        <a href="/html/mon_cv.html">Mon cv</a>
+                        <a href="/html/mes_projets.html">Mes projets</a>
+                        <a href="/html/inscription.html">Inscrivez-vous</a>
+                        <a class="is_inside" href="/html/contact.html">Contactez-moi</a>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="form">
+                <h3>Contact</h3>
+                <form>
+                    
+                    <div class="form-control">
+                        <label for="nom">Nom et prénom :</label>
+                        <input name="nom" type="text" placeholder="Saisir votre nom">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email :</label>
+                        <input name="email" type="email" placeholder="Saisir @ email">
+                    </div>
+                    <div class="form-control">
+                        <label for="num">Num Telephone :</label>
+                        <input name="num" type="tel" placeholder="Saisir Num telephone">
+                    </div>
+                    <div class="form-control">
+                        <label for="message">Message :</label>
+                        <textarea name="message" placeholder="Message"></textarea>    
+                    </div>
+                    <div class="form-control btn">
+                        <input type="submit" value="Envoyer">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+            <p>Copyright©2022</p>
+            <a href="mailto:laboDexter@gmail.fr">laboDexter@gmail.fr</a>
+            </div>
+        </footer>
+
 </body>
 </html>
+
+
+
