@@ -11,7 +11,7 @@
 }
 
 body {
-    background: var(--primary);
+   
     margin: 0;
 }
 
@@ -29,6 +29,10 @@ a {
     color: black;
 }
 
+header{
+    background: var(--primary);
+}
+
 header img {
     width: 13rem;
     height: 16rem;
@@ -37,6 +41,13 @@ header img {
     margin: 5%;
     cursor: pointer;
     align-content: center;
+    animation:slideInFromTop 1s ease-out;
+
+}
+
+@keyframes slideInFromTop{
+	from { transform:translateY(-200%); opacity: 0; }
+	to { transform:translateY(0); opacity: 1;}
 }
 
 header h1 {
@@ -46,6 +57,12 @@ header h1 {
     width: 70%;
     margin: auto;
     font-size: 80px;
+    animation: rainbow 1s linear alternate infinite  ;
+}
+
+@keyframes rainbow{
+	0%{ color:yellow }
+    100%{color: #8dcfde}
 }
 
 header h2 {
@@ -64,6 +81,7 @@ header p {
     text-align: center;
 }
 
+
 main {
     background-color: var(--secondary);
     display: flex;
@@ -80,6 +98,7 @@ main section {
     background: var(--tertiary);
     margin: 30px;
     padding: 1.5%;
+    height: fit-content;
 }
 
 main section h3 {
@@ -129,6 +148,18 @@ main section p{
     background: #9a91f862;
 }
 
+footer {
+    animation: fadeIn 1000ms linear;
+}
+
+@keyframes fadeIn{
+	from { opacity: 0; }
+}
+
+footer{
+    background: var(--primary);
+}
+
 footer .footer-content{
     display: flex;
     justify-content: space-around;
@@ -148,6 +179,11 @@ footer a{
     width: max-content;
     color: blue;
     text-decoration: underline;
+    transition: 500ms;
+}
+
+footer a:hover{
+    transform: scale(1.1);
 }
 
 /**Pages Formulaires (Inscription & Contact**/
