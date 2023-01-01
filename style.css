@@ -11,15 +11,8 @@
 }
 
 body {
-   
     margin: 0;
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-decoration: none;
+    min-width: 370px;
 }
 
 a {
@@ -27,6 +20,14 @@ a {
     padding: 2rem;
     width: 400px;
     color: black;
+}
+
+.header-content{
+    max-width: 1450px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto ;
+    align-items: center;
 }
 
 header{
@@ -42,7 +43,6 @@ header img {
     cursor: pointer;
     align-content: center;
     animation:slideInFromTop 1s ease-out;
-
 }
 
 @keyframes slideInFromTop{
@@ -71,21 +71,22 @@ header h2 {
     font-size: 30px;
 }
 
-header {
-    display: flex;
-    justify-content: space-evenly;
-}
 
 header p {
     color: blue;
     text-align: center;
 }
 
+.main-content{
+    max-width: 1450px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
 
 main {
     background-color: var(--secondary);
-    display: flex;
-    justify-content: space-between;
+    min-height: 880px;
 }
 
 main section {
@@ -114,7 +115,7 @@ main section .black {
 }
 
 main section p{
-    height: 50px;
+    height: 100%;
     font-size: 23px;
     text-align: left;
 }
@@ -122,6 +123,14 @@ main section p{
 .menu{
     color: yellow;
 }
+
+.menu .links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
 
 .menu a {
     border-bottom: 2px solid blue;
@@ -148,7 +157,8 @@ main section p{
     background: #9a91f862;
 }
 
-footer {
+footer{
+    background: var(--primary);
     animation: fadeIn 1000ms linear;
 }
 
@@ -156,16 +166,12 @@ footer {
 	from { opacity: 0; }
 }
 
-footer{
-    background: var(--primary);
-}
-
 footer .footer-content{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1450px;
 }
 
 footer p{
@@ -186,16 +192,16 @@ footer a:hover{
     transform: scale(1.1);
 }
 
-/**Pages Formulaires (Inscription & Contact**/
+/**Pages Formulaires (Inscription & Contact)**/
 div.form {
-    width: 80%;
+    width: 100%;
     margin: 50px;
     padding: 1%;
     background: var(--tertiary);
 }
 
 form{
-    width: 60%;
+    width: 90%;
     margin: auto;
 }
 
@@ -218,7 +224,13 @@ form input{
 form label{
     text-align: end;
     font-size: 20px;
-    margin: 7px 10%;
+    margin: 7px -10%;
+    width: 100%;
+}
+
+.form-control.sexe div label{
+    width: max-content;
+    margin: 1%;
 }
 
 form input[type="radio"]{
@@ -284,3 +296,182 @@ form input[type="reset"]:hover
     width: 300px;
 }
 
+/* RESPONSIVE */
+
+@media (max-width : 1024px) {
+
+    /* header */
+
+    header{
+        padding: 15px 0;
+    }
+    header img {
+        width: 5rem;
+        height: 5rem;
+        border:  0px solid;
+        border-radius: 50%;
+        margin:  0 5px;
+
+    }
+
+    header h1 {
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    header h2 {
+        font-size: 13px;
+        margin: 10px 0;
+    }
+
+    /* Menu */
+    .main-content{
+        flex-direction: column;
+    }
+
+    .menu{
+        background: var(--tertiary);
+    }
+
+    .menu .links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    
+    .menu a {
+        border-bottom: 0px solid blue;
+        border-left : .001px solid #9a91f8b9;
+        border-right : .001rem solid #9a91f8b9;
+        font-size: 18px;
+        padding: 1%;  
+        transition: 300ms;
+        text-align: center;
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+    }
+    
+    .menu .title {
+        display: none;
+    }
+    
+    .menu .is_inside{
+        color: blue;
+        border-bottom: 0px;
+        box-shadow: inset 0px 0px 10px #b6b6b6;
+        background: none;
+    }
+
+    .menu a:hover{
+        color: blue;
+        border-bottom: 0px;
+        box-shadow: inset 0px 0px 10px #b6b6b6;
+        background: none;
+    }
+
+    /*Contenu (Accueil, monCV, mes projet)*/
+
+    main section {
+        margin: 3%;
+        padding: 2%;
+    }    
+    main section h3 {
+        font-size: 20px;
+    }
+    
+    main section p{
+        font-size: 18px;
+        margin: 1%;
+    }
+    
+    /*Formulaire*/
+
+    div.form {
+        width: auto;
+        margin: 3%;
+        padding: 2%;
+    }
+    
+    form{
+        width: 100%;
+        padding: 0 3%;
+    }
+    
+    .form h3 {
+        font-size: 22px;
+    }
+    
+    form input{
+        height: 35px;
+        width: 90%;
+        border: #b0b0b0 1px solid;
+        font-size: 16px;
+    }
+    
+    form label{
+        margin: 7px -10%;
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    .form-control.sexe {
+        height: max-content;
+    }
+
+    .form-control.sexe > label{
+        transform: translateY(15px);
+        height: fit-content;
+    }
+    
+    .form-control.sexe > div{
+        width: 200px;
+    }
+
+    form input[type="radio"]{
+        width: auto;
+        cursor: pointer;
+    }
+    
+    form textarea{
+        font-size: 16px;
+        width:  90%;
+        min-width: 90%;
+        max-width: 90%;
+    }
+    
+    form input[type="submit"],
+    form input[type="reset"]
+    {
+        font-size: 16px;
+    } 
+    
+    .form-control{
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        margin: 8px 0;
+        height: 40px;
+    }
+    
+    .form-control.two_btn{
+        display: flex;    
+        width: 80%;
+    }
+    
+    .form-control div{
+        margin: 12px 0;
+        height: 43px;
+    }
+
+    /* Footer */
+    footer p{
+        font-size: 14px ;
+    }
+    
+    footer a{
+        font-size: 16px ;
+        padding: 35px 0;
+    }
+    
+}
