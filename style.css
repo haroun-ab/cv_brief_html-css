@@ -57,13 +57,12 @@ header h1 {
     width: 70%;
     margin: auto;
     font-size: 80px;
-    animation: rainbow 2s linear alternate infinite  ;
+    animation: rainbow 1.5s linear alternate infinite  ;
 }
 
 @keyframes rainbow{
 	0%{ color:yellow }
-    25%{color: #3ac1df}
-    50%{color: #877dfd}
+    50%{color: #66cfe7}
     100%{color: yellow}
 }
 
