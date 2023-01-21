@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 :root{
-    --primary : #A7D6E0 ;
-    --secondary : #B3ACFF;
-    --tertiary : #E6E6E6;
+    --primary : #387065 ;
+    --secondary : #f0f0f0;
+    --tertiary :  white;
+    --gold : #c6a609;
 }
 
 *{
@@ -13,6 +14,7 @@
 body {
     margin: 0;
     min-width: 370px;
+    caret-color: red;
 }
 
 a {
@@ -37,12 +39,12 @@ header{
 header img {
     width: 13rem;
     height: 16rem;
-    border: var(--tertiary) 10px solid;
+    border: var(--gold) 10px solid;
     padding: 0%;
     margin: 5%;
     cursor: pointer;
     align-content: center;
-    animation:slideInFromTop 1s ease-out;
+    animation:slideInFromTop 0.5s ease-out;
 }
 
 @keyframes slideInFromTop{
@@ -53,17 +55,18 @@ header img {
 header h1 {
     text-align: center;
     flex-wrap: wrap;
-    color: yellow;
+    color: var(--gold);
     width: 70%;
     margin: auto;
     font-size: 80px;
-    animation: rainbow 1.5s linear alternate infinite  ;
+    animation: rainbow 2s linear alternate infinite  ;
 }
 
 @keyframes rainbow{
-	0%{ color:yellow }
-    50%{color: #66cfe7}
-    100%{color: yellow}
+	0%{ color: var(--gold) }
+    84%{ color: var(--gold) }
+    86%{color: #398d7c }
+    95%{ color: var(--gold) }
 }
 
 header h2 {
@@ -74,7 +77,7 @@ header h2 {
 
 
 header p {
-    color: blue;
+    color: var(--primary) ;
     text-align: center;
 }
 
@@ -101,6 +104,7 @@ main section {
     margin: 30px;
     padding: 1.5%;
     height: fit-content;
+    box-shadow: 0px 0px 5px  #cdcdcd;
 }
 
 main section h3 {
@@ -112,7 +116,7 @@ main section h3 {
 }
 
 main section .black {
-    color: black;
+    color: var(--gold);
 }
 
 main section p{
@@ -122,7 +126,7 @@ main section p{
 }
 
 .menu{
-    color: yellow;
+    color: var(--gold);
 }
 
 .menu .links {
@@ -134,8 +138,8 @@ main section p{
 
 
 .menu a {
-    border-bottom: 2px solid blue;
-    color: blue;
+    border-bottom: 2px solid var(--primary);
+    color: var(--primary);
     font-size: 22px;
     width: 23rem;
     padding: 25px;  
@@ -144,8 +148,8 @@ main section p{
 
 .menu a:hover{
     
-    color: yellow;
-    background: #9a91f862;
+
+    transform: translateX(10px);
 }
 
 .menu .title {
@@ -153,9 +157,9 @@ main section p{
 }
 
 .menu .is_inside{
-    border-bottom: 2px solid yellow;
-    color: yellow;
-    background: #9a91f862;
+    border-bottom: 2px solid var(--gold);
+    color: var(--gold);
+
 }
 
 footer{
@@ -184,7 +188,7 @@ footer p{
 footer a{
     font-size: 20px ;
     width: max-content;
-    color: blue;
+    color: var(--gold);
     text-decoration: underline;
     transition: 500ms;
 }
@@ -199,11 +203,13 @@ div.form {
     margin: 50px;
     padding: 1%;
     background: var(--tertiary);
+    box-shadow: 0px 0px 5px  #cdcdcd;
 }
 
 form{
     width: 90%;
     margin: auto;
+
 }
 
 .form h3 {
@@ -267,8 +273,8 @@ form input[type="reset"]
 form input[type="submit"]:hover,
 form input[type="reset"]:hover
 { 
-    background: #8dcfde;
-    transform: scale(1.03);
+    background: #398d7c;
+    transform: scaleX(1.07);
 }
 
 .form-control{
@@ -343,10 +349,10 @@ form input[type="reset"]:hover
     }
     
     .menu a {
-        border-bottom: 0px solid blue;
-        border-left : .001px solid #9a91f8b9;
-        border-right : .001rem solid #9a91f8b9;
-        font-size: 18px;
+        border-bottom: 0px solid transparent;
+        border-left : .001px solid ;
+        border-right : .001rem solid ;
+        font-size: 14px;
         padding: 1%;  
         transition: 300ms;
         text-align: center;
@@ -354,6 +360,10 @@ form input[type="reset"]:hover
         align-items: center ;
         justify-content: center;
         color: black;
+        font-weight: 600;
+        width: 20%;
+        overflow: hidden;
+        text-overflow:ellipsis;
     }
     
     .menu .title {
@@ -361,16 +371,17 @@ form input[type="reset"]:hover
     }
     
     .menu .is_inside{
-        color: #3ac1df;
+        color: var(--primary);
         border-bottom: 0px;
-        box-shadow: inset 0px 0px 10px #b6b6b6;
+        box-shadow: inset 0px 0px 5px #b0b0b0;
         background: none;
     }
 
     .menu a:hover{
-        color: #3ac1df;
+        color: var(--primary);
         border-bottom: 0px;
         background: none;
+        transform: translateX(0px);
     }
 
     /*Contenu (Accueil, monCV, mes projet)*/
